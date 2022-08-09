@@ -1,0 +1,15 @@
+services:
+  db:
+    container_name: ${PROJECT_NAME}_db
+    image: mysql:latest
+    volumes:
+      - db-data:/var/lib/mysql
+      - mysql/my.cnf:/etc/mysql/my.cnf
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: Qwerty123
+      MYSQL_DATABASE: indexes
+
+volumes:
+  db-data: { }
