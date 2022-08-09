@@ -4,6 +4,8 @@ up:
 down:
 	docker-compose down
 
-run:
+cs:
 	python3 src/filldb.py
+
+tr:
 	python3 transactions.py
