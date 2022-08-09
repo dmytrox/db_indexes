@@ -5,7 +5,6 @@ To run the app just type this command in your terminal.
 ```
 make up
 ```
-
 # Results
 
 | Requests                                                                                                     |            default |      btree |       hash |
@@ -18,9 +17,10 @@ make up
 - Hash index fast working with =. <> operations but not with ranges.
 - BTree index works like log(N) to find the value in the key.
 
+> Where 0, 1, 2 is innodb_flush_log_at_trx_commit
+
 | Operations                                    | 0         | 1         | 2         |
-| --------------------------------------------- | --------- | --------- | --------- |
-| <td colspan=3> innodb_flush_log_at_trx_commit |
+|     :---:      |     :---:      |     :---:      |     :---:      |
 | 1                                             | 1.05 secs | 1.12 secs | 1.11 secs |
 | 5                                             | 1.24 secs | 1.94 secs | 1.23 secs |
 | 50                                            | 2.56 secs | 5.32 secs | 2.43 secs |
